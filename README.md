@@ -34,22 +34,22 @@ Staytion is a newly established hotel which provides world class experience for 
 ### Mockups
 
 #### Reservations List
-![mockup of reservations table, listing all the reservation details](/documentation/reservations.png)
+![mockup of reservations table, listing all the reservation details](/documentation/reservations.jpg)
 
 #### Add new reservation
-![mockup of adding new reservation through a form of inputs](/documentation/add-new-reservation.png)
+![mockup of adding new reservation through a form of inputs](/documentation/add-new-reservation.jpg)
 
 #### View reservation
-![mockup of viewing a selected reservation details ](/documentation/view-reservation.png)
+![mockup of viewing a selected reservation details ](/documentation/view-reservation.jpg)
 
 #### Guests
-![mockup showing a list of all the guests](/documentation/guests.png)
+![mockup showing a list of all the guests](/documentation/guests.jpg)
 
 #### Rooms
-![mockup showing a list of all the rooms available](/documentation/rooms.png)
+![mockup showing a list of all the rooms available](/documentation/rooms.jpg)
 
 #### Dashboard
-![mockup of dashboard containing consolidated information about bookings and revenue generated](dashboard.png)
+![mockup of dashboard containing consolidated information about bookings and revenue generated](dashboard.jpg)
 
 
 ### Endpoints
