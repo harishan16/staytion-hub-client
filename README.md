@@ -49,7 +49,7 @@ Staytion is a newly established hotel which provides world class experience for 
 ![mockup showing a list of all the rooms available](/documentation/rooms.png)
 
 #### Dashboard
-![mockup of dashboard containing consolidated information about bookings and revenue generated](/documentation/dashboard.png)
+![mockup of dashboard containing consolidated information about bookings and revenue generated](dashboard.png)
 
 
 ### Endpoints
