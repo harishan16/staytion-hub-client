@@ -37,7 +37,7 @@ Staytion is a newly established hotel which provides world class experience for 
 ![mockup of reservations table, listing all the reservation details](/documentation/reservations.jpg)
 
 #### Add new reservation
-![mockup of adding new reservation through a form of inputs](/documentation/add-new-reservation.jpg)
+![mockup of adding new reservation through a form of inputs](add-new-reservation.jpg)
 
 #### View reservation
 ![mockup of viewing a selected reservation details ](/documentation/view-reservation.jpg)
