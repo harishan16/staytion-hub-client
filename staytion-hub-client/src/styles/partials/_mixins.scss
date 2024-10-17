@@ -1,0 +1,16 @@
+@use './variables' as *;
+
+@mixin text-style ($size, $weight, $line-height) {
+    font-family: 'Poppins';
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $line-height;
+}
+
+@mixin display-properties ($display, $direction, $justify-content, $align-items, $gap) {
+  display: $display;
+  flex-direction: $direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  gap:$gap;
+}
