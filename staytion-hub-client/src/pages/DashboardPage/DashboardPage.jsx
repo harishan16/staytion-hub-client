@@ -1,6 +1,6 @@
 function DashboardPage () {
     return (
-        <section>dashboard</section>
+        <section></section>
     );
 }
 

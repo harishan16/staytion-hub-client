@@ -1,6 +1,6 @@
 function ReservationList () {
     return (
-        <section></section>
+        <section className='list'>reservations list</section>
     );
 }
 
