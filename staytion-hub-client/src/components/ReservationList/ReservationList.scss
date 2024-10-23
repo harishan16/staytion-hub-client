@@ -12,6 +12,40 @@
         padding: 2rem;
     }
 
+    &__label {
+
+    }
+
+    &__label-list {
+        list-style-type: none;
+        display: flex;
+        text-transform: uppercase;
+        font-size: 14px;
+        flex-direction: row;
+        gap:1rem;
+        margin:0;
+        padding: 2rem 0;
+        justify-content: space-between;
+        border-bottom:1px solid $staytion-black;
+
+    }
+
+    &__label-item {
+        width:15%;
+
+        // &--room-number {
+        //     width: 15%;
+        // }
+
+        // &--guests-number {
+        //     width: 15%;
+        // }
+
+        &--action {
+            padding-left:3rem;
+        }
+    }
+
     &__list {
         list-style-type: none;
         display: flex;
@@ -24,15 +58,15 @@
     }
 
     &__list-item {
-        width:20%;
+        width:15%;
 
-        &--room-number {
-            width: 10%;
-        }
+        // &--room-number {
+        //     width: 10%;
+        // }
 
-        &--guests-number {
-            width: 10%;
-        }
+        // &--guests-number {
+        //     width: 10%;
+        // }
 
         &--action {
             padding-left:3rem;

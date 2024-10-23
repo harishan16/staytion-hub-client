@@ -25,9 +25,20 @@ function ReservationList ({data}) {
         <Layout className={block}>
             <nav className={`${block}__navigation`}>
                 <h1 className={`${block}__title`}>Reservations</h1>
-                <Button type='primary' className={`${block}__button`}>Add new Reservation</Button>
+                <Button type='primary' to='/reservations/add' className={`${block}__button`}>Add new Reservation</Button>
             </nav>
             <section className={`${block}__container`}>
+                <section className={`${block}__label`}>
+                    <ul className={`${block}__label-list`}>
+                        <li className={`${block}__label-item ${block}__label-item--guest-name`}>Guest Name</li>
+                        <li className={`${block}__label-item ${block}__label-item--room-number`}>Room Number</li>
+                        <li className={`${block}__label-item ${block}__label-item--guests-number`}>No of Guests</li>
+                        <li className={`${block}__label-item ${block}__label-item--check-in`}>Check-in Time</li>
+                        <li className={`${block}__label-item ${block}__label-item--check-out`}>Check-out Time</li>
+                        <li className={`${block}__label-item ${block}__label-item--action`}>Actions</li>
+                    </ul>
+
+                </section>
                 
                     {data.map((item) => {
                         return (
