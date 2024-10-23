@@ -5,6 +5,22 @@ import './ReservationList.scss';
 function ReservationList ({data}) {
     console.log(data);
     const block = 'reservations';
+
+    function dateConversion (item) {
+        const time = new Date(item);
+        const weekDays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+        const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+        
+        // Get the day of the week, day, and month
+        const dayOfWeek = weekDays[time.getDay()];
+        const day = time.getDate();
+        const month = monthNames[time.getMonth()];
+        
+        // Format the date
+        let date = `${dayOfWeek}, ${day}, ${month}`;
+        return date;
+    }
+
     return (
         <Layout className={block}>
             <nav className={`${block}__navigation`}>
@@ -12,14 +28,23 @@ function ReservationList ({data}) {
                 <Button type='primary' className={`${block}__button`}>Add new Reservation</Button>
             </nav>
             <section className={`${block}__container`}>
-                <ul className={`${block}__list`}>
+                
                     {data.map((item) => {
                         return (
-                            <li className={`${block}__list-item`}>{}</li>
+                            <ul key={item.id} className={`${block}__list`}>
+                                <li className={`${block}__list-item ${block}__list-item--guest-name `}>{item.guest_name}</li>
+                                <li className={`${block}__list-item ${block}__list-item--room-number`}>{item.room_number}</li>
+                                <li className={`${block}__list-item ${block}__list-item--guests-number`}>{item.no_of_guests}</li>
+                                <li className={`${block}__list-item ${block}__list-item--check-in`}>{dateConversion(item.check_in)}</li>
+                                <li className={`${block}__list-item ${block}__list-item--check-out`}>{dateConversion(item.check_out)}</li>
+                                <li className={`${block}__list-item ${block}__list-item--action`}>
+                                    <Button type='secondary' className={`${block}__button`}>View</Button>
+                                </li>
+                            </ul> 
                         )
                     })}
                     
-                </ul>    
+                   
             </section>
         </Layout>
     );
