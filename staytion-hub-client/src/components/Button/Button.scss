@@ -1,0 +1,32 @@
+@use "../../styles/partials/global" as *;
+
+.button {
+    // width: 5rem;
+    // height: 2rem;
+    padding: 0.5rem 2rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 0.5rem;
+    display:block;
+    font-size: 16px;
+    height: 3.5rem;
+    font-family: 'Poppins';
+    color:$staytion-white;
+    text-decoration: none;
+
+    &--primary {
+        background-color: $staytion-primary;
+        border: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &--secondary {
+        background-color: $staytion-white;
+        color: $staytion-black;
+        border: 1px solid $staytion-black;
+    }
+
+}

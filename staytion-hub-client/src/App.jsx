@@ -1,4 +1,4 @@
-import './App.css'
+import './App.scss'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import DashboardPage from './pages/DashboardPage/DashboardPage'
 import ReservationListPage from './pages/ReservationListPage/ReservationListPage';
@@ -15,9 +15,8 @@ function App() {
 
   return (
     <>
-      {/* <h1>Welcome to Staytion Hub</h1> */}
-      <SideBar></SideBar>
       <BrowserRouter>
+      <SideBar />
       <Routes>
             <Route path="/" element={<DashboardPage />} />
 

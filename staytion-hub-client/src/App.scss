@@ -1,0 +1,11 @@
+
+@use './styles/partials/global' as *;
+
+body {
+    background-color: $staytion-background;
+}
+
+#root {
+    display: flex;
+    flex-wrap: nowrap;
+}

@@ -1,6 +1,11 @@
+import Layout from "../../components/Layout/Layout";
+
 function DashboardPage () {
     return (
-        <section>dashboard</section>
+        // <section></section>
+        <Layout className='dashboard'>
+
+        </Layout>
     );
 }
 

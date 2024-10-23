@@ -1,6 +1,6 @@
-@use './mixins' as *;
-@use './variables' as *;
-@use './typography' as *;
+@forward 'mixins';
+@forward 'variables';
+@forward 'typography';
 
 * {
     box-sizing: border-box;
