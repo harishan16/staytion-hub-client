@@ -27,6 +27,10 @@
         background-color: $staytion-white;
         color: $staytion-black;
         border: 1px solid $staytion-black;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 
 }

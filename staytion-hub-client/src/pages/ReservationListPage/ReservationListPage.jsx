@@ -11,13 +11,14 @@ function ReservationListPage () {
     const [isLoading, setIsLoading] = useState(true);
     const url = import.meta.env.VITE_API_URL;
 
+// get the list of all reservations to display list
     const getList = useCallback(async () => {
         setIsLoading(true);
         setIsError(false);
 
         try {
           const { data } = await axios.get(`${url}/api/reservations/`);
-          console.log(data);
+          // console.log(data);
           setReservationList(data);
           setIsLoading(false);
         } catch (error) {
@@ -30,7 +31,6 @@ function ReservationListPage () {
         getList();
       }, [getList]);
 
-    //   console.log(reservationList);
 
     return (
         <ReservationList data={reservationList}></ReservationList>
