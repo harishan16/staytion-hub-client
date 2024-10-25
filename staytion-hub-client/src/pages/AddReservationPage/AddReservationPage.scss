@@ -1,0 +1,103 @@
+@use "../../styles/partials/global" as *;
+
+.add-reservation {
+
+    &__navigation {
+        padding:2rem;
+    }
+
+    &__inputs {
+
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        padding: 0 2rem;
+        gap:3rem;
+    }
+
+    &__guest-info {
+        display: flex;
+        // flex-direction: column;
+        gap:2rem;
+        width: 60%;
+    }
+
+    &__guest-name {
+        width:50%;
+    }
+
+    &__guest-count {
+        width:50%;
+    }
+
+    &__guest-label {
+        // display: block;
+    }
+
+    &__room-info {
+        display: flex;
+        // flex-direction: column;
+        // width: 45%;
+        gap:2rem;
+        width: 60%;
+
+    }
+
+    &__room-label {
+        // display: block;
+
+    }
+
+    &__room-type {
+        width:50%;
+
+    }
+
+    &__room-number {
+        width:50%;
+
+    }
+
+    &__date-info {
+        display: flex;
+        width: 60%;
+        gap:2rem;
+        flex-wrap:wrap;
+    }
+
+    &__date-input {
+        padding: 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size:16px;
+    }
+
+    &__date-label {
+        margin-bottom: 0.5rem;
+        font-size:14px;
+        color:$staytion-gray;
+        display: flex;
+        flex-direction: column;
+        // width: 100%;
+        flex:1;
+    }
+
+    &__date-error {
+        color:$red;
+        font-size: 12px;
+        margin-top:-2rem;
+    }
+
+    &__form-actions {
+        display: flex;
+        gap:2rem;
+    }
+
+    &__button {
+        width:15%;
+        text-align: center;
+        // display: flex;
+    }
+}
