@@ -80,7 +80,7 @@ function AddReservationPage () {
 
     // get room numbers based on roomtype selected
     const filteredRoomNumber = selectedRoomType 
-            ? rooms.filter((room) => {return room.room_type === selectedRoomType})
+            ? rooms.filter((room) => {return room.room_type === selectedRoomType && room.status === 'Available'})
                    .map((room) => {return room.room_number}) 
             : [];
 
@@ -111,10 +111,12 @@ function AddReservationPage () {
             // alert('if');
             validateDates(name === 'check_in' ? value : values.check_in, 
                 name === 'check_out' ? value : values.check_out);
-        }
-
-        
+        }  
     }
+    const getTodayDate = () => {
+        const today = new Date();
+        return today.toISOString().split('T')[0];
+    };
 
     const validateDates = (checkIn, checkOut) => {
         if (checkIn && checkOut) {
@@ -150,7 +152,7 @@ function AddReservationPage () {
     // handling form submit
     const handleSubmit = async (event) => {
         event.preventDefault();
-        let toastBox, successMessage;
+        let toastBox;
 
         if (dateError) {
             toast.error(dateError);
@@ -160,8 +162,13 @@ function AddReservationPage () {
         try {
             // toastBox = toast.loading("Submitting new reservation...");
             await axios.post(`${url}/api/reservations`, values);
-            // successMessage = "Reservation successfully made!";
             toastBox = toast.success("Reservation successfully made!");
+
+            // patch call to update rooms as occupied
+
+
+
+            
             setTimeout(() => {
                 navigate('/reservations');
             }, 3000);
@@ -239,6 +246,7 @@ function AddReservationPage () {
                             value={values['check_in']} 
                             onChange={handleDateChange} 
                             className={`${block}__date-input`}
+                            min={getTodayDate()}
                             required
                         />
                         </label>
@@ -249,21 +257,22 @@ function AddReservationPage () {
                             value={values['check_out']} 
                             onChange={handleDateChange} 
                             className={`${block}__date-input`}
+                            min={values['check_in'] || getTodayDate()}
                             required 
                         />
                         </label>
                         {dateError && <div className={`${block}__date-error`}>{dateError}</div>}
                         {/* <DateRangePicker onDatesChange={handleDatesChange}/> */}
                     </div>
-                    <div>
-                        {/* <input 
+                    {/* <div>
+                        <input 
                             type="file"
                             name="proof_document"
                             accept="image/*"
                             onChange={handleUpload}
                             className={`${block}__image`} 
-                        /> */}
-                    </div>
+                        />
+                    </div> */}
                     <div className={`${block}__form-actions`}>
                         <Button type='secondary' to='/reservations' className={`${block}__button`}>Cancel</Button>
                         <Button type='primary' to='' className={`${block}__button`}>Submit</Button>

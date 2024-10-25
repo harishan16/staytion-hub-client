@@ -1,11 +1,10 @@
+import './ReservationsSummaryCard.scss';
 import axios from "axios";
 import { useCallback, useEffect, useRef, useState } from "react";
-// import { ToastContainer, toast } from "react-toastify";
-// import "react-toastify/dist/ReactToastify.css";
-import ReservationList from '../../components/ReservationList/ReservationList'
 
-function ReservationListPage () {
+function ReservationsSummaryCard () {
 
+    
     const [reservationList, setReservationList] = useState([]);
     const [isError, setIsError] = useState(false);
     const [isLoading, setIsLoading] = useState(true);
@@ -18,7 +17,7 @@ function ReservationListPage () {
 
         try {
           const { data } = await axios.get(`${url}/api/reservations/`);
-          // console.log(data);
+          console.log(data);
           setReservationList(data);
           setIsLoading(false);
         } catch (error) {
@@ -31,10 +30,12 @@ function ReservationListPage () {
         getList();
       }, [getList]);
 
-
     return (
-        <ReservationList data={reservationList}></ReservationList>
+        <section className='summary-card'>
+            
+        </section>
+
     );
 }
 
-export default ReservationListPage;
+export default ReservationsSummaryCard;
