@@ -64,6 +64,7 @@
         display: flex;
         width: 60%;
         gap:2rem;
+        flex-wrap:wrap;
     }
 
     &__date-input {
@@ -79,7 +80,12 @@
         color:$staytion-gray;
         display: flex;
         flex-direction: column;
-        width: 100%;
+        // width: 100%;
+        flex:1;
+    }
+
+    &__date-error {
+        color:$red;
     }
 
     &__form-actions {

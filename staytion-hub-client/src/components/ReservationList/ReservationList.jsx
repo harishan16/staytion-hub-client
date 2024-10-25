@@ -39,6 +39,7 @@ function ReservationList ({data}) {
                     </ul>
 
                 </section>
+                <section className={`${block}__content`}>
                 
                     {data.map((item) => {
                         return (
@@ -54,7 +55,7 @@ function ReservationList ({data}) {
                             </ul> 
                         )
                     })}
-                    
+                </section>   
                    
             </section>
         </Layout>
