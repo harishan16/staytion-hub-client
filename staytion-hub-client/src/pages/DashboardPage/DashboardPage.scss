@@ -1,0 +1,16 @@
+.dashboard {
+
+    &__navigation {
+        padding: 2rem 2rem 0 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__summary {
+        padding: 2rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+}
