@@ -5,12 +5,16 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
 
     &__summary {
-        padding: 2rem;
+        padding: 0 2rem;
         display: flex;
         justify-content: space-between;
     }
 
+    &__chart {
+        padding:2rem;
+    }
 }
