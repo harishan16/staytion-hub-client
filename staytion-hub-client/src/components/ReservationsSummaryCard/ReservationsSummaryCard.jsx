@@ -1,6 +1,7 @@
 import './ReservationsSummaryCard.scss';
 import axios from "axios";
 import { useCallback, useEffect, useRef, useState } from "react";
+import Card from '../Card/Card';
 
 function ReservationsSummaryCard () {
 
@@ -16,7 +17,7 @@ function ReservationsSummaryCard () {
         setIsError(false);
 
         try {
-          const { data } = await axios.get(`${url}/api/reservations/`);
+          const { data } = await axios.get(`${url}/api/reservations`);
           console.log(data);
           setReservationList(data);
           setIsLoading(false);
@@ -31,10 +32,7 @@ function ReservationsSummaryCard () {
       }, [getList]);
 
     return (
-        <section className='summary-card'>
-            
-        </section>
-
+        <Card title="Total Reservations" value={reservationList? reservationList.length : ''}/>
     );
 }
 
