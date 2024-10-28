@@ -6,10 +6,6 @@
         padding:2rem;
     }
 
-    &__inputs {
-
-    }
-
     &__form {
         display: flex;
         flex-direction: column;
@@ -19,7 +15,6 @@
 
     &__guest-info {
         display: flex;
-        // flex-direction: column;
         gap:2rem;
         width: 60%;
     }
@@ -32,32 +27,18 @@
         width:50%;
     }
 
-    &__guest-label {
-        // display: block;
-    }
-
     &__room-info {
         display: flex;
-        // flex-direction: column;
-        // width: 45%;
         gap:2rem;
         width: 60%;
-
-    }
-
-    &__room-label {
-        // display: block;
-
     }
 
     &__room-type {
         width:50%;
-
     }
 
     &__room-number {
         width:50%;
-
     }
 
     &__date-info {
@@ -80,7 +61,6 @@
         color:$staytion-gray;
         display: flex;
         flex-direction: column;
-        // width: 100%;
         flex:1;
     }
 
@@ -98,6 +78,5 @@
     &__button {
         width:15%;
         text-align: center;
-        // display: flex;
     }
 }

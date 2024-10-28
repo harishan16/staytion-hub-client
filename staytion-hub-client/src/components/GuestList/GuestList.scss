@@ -1,6 +1,6 @@
 @use "../../styles/partials/global" as *;
 
-.reservations {
+.guests {
     &__navigation {
         padding:2rem 2rem 0 2rem;
         display: flex;
@@ -10,10 +10,6 @@
 
     &__container {
         padding: 1rem 2rem 2rem 2rem;
-    }
-
-    &__label {
-
     }
 
     &__label-list {
@@ -27,33 +23,26 @@
         padding: 2rem 0;
         justify-content: space-between;
         border-bottom:1px solid $staytion-black;
-
     }
 
     &__label-item {
-        width:15%;
+        width:20%;
 
-        // &--room-number {
-        //     width: 15%;
-        // }
-
-        // &--guests-number {
-        //     width: 15%;
-        // }
-
-        &--action {
-            padding-left:3rem;
+        &--guest-name {
+            width: 15%;
         }
+
+        &--address {
+            width: 25%;
+        }
+
     }
 
     &__content {
-        // eight: 100vh;
-    overflow-y: auto;
-    width: 100%;
-    // width: 100%;
-    height: 70vh;
     // overflow-y: auto;
-    // border: 1px solid #ccc;
+    width: 100%;
+    height: 70vh;
+    overflow-y: auto;
     }
 
     &__list {
@@ -68,18 +57,15 @@
     }
 
     &__list-item {
-        width:15%;
+        width:20%;
 
-        // &--room-number {
-        //     width: 10%;
-        // }
-
-        // &--guests-number {
-        //     width: 10%;
-        // }
-
-        &--action {
-            padding-left:3rem;
+        &--guest-name {
+            width: 15%;
         }
+
+        &--address {
+            width: 25%;
+        }
+
     }
 }

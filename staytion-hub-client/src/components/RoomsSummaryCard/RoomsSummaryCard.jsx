@@ -6,10 +6,10 @@ function RoomsSummaryCard ({roomsList}) {
   console.log(roomsList);
 
       const occupiedRooms = roomsList.filter((room) => { return room.status === 'Occupied'})
-      console.log(occupiedRooms);
+      // console.log(occupiedRooms);
 
-      const occupancyRate = occupiedRooms.length/roomsList.length * 100;
-      console.log(occupancyRate);
+      const occupancyRate = Math.round(occupiedRooms.length/roomsList.length * 100);
+      // console.log(occupancyRate);
 
     return (
       <>
