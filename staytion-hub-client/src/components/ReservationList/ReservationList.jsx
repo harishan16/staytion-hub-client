@@ -30,9 +30,10 @@ function ReservationList ({data}) {
             <section className={`${block}__container`}>
                 <section className={`${block}__label`}>
                     <ul className={`${block}__label-list`}>
-                        <li className={`${block}__label-item ${block}__label-item--guest-name`}>Guest Name</li>
+                        <li className={`${block}__label-item ${block}__label-item--room-id`}>Room ID</li>
                         <li className={`${block}__label-item ${block}__label-item--room-number`}>Room Number</li>
                         <li className={`${block}__label-item ${block}__label-item--guests-number`}>No of Guests</li>
+                        <li className={`${block}__label-item ${block}__label-item--guest-name`}>Guest Name</li>
                         <li className={`${block}__label-item ${block}__label-item--check-in`}>Check-in Time</li>
                         <li className={`${block}__label-item ${block}__label-item--check-out`}>Check-out Time</li>
                         <li className={`${block}__label-item ${block}__label-item--action`}>Actions</li>
@@ -44,9 +45,10 @@ function ReservationList ({data}) {
                     {data.map((item) => {
                         return (
                             <ul key={item.id} className={`${block}__list`}>
-                                <li className={`${block}__list-item ${block}__list-item--guest-name `}>{item.guest_name}</li>
+                                <li className={`${block}__list-item ${block}__list-item--room-id`}>{item.room_id}</li>
                                 <li className={`${block}__list-item ${block}__list-item--room-number`}>{item.room_number}</li>
                                 <li className={`${block}__list-item ${block}__list-item--guests-number`}>{item.no_of_guests}</li>
+                                <li className={`${block}__list-item ${block}__list-item--guest-name `}>{item.guest_name}</li>
                                 <li className={`${block}__list-item ${block}__list-item--check-in`}>{dateConversion(item.check_in)}</li>
                                 <li className={`${block}__list-item ${block}__list-item--check-out`}>{dateConversion(item.check_out)}</li>
                                 <li className={`${block}__list-item ${block}__list-item--action`}>

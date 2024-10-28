@@ -5,7 +5,7 @@ import ReservationListPage from './pages/ReservationListPage/ReservationListPage
 import AddReservationPage from './pages/AddReservationPage/AddReservationPage';
 import ViewReservationPage from './pages/ViewReservationPage/ViewReservationPage';
 import GuestListPage from './pages/GuestListPage/GuestListPage';
-import RoomsListPage from './pages/RoomsListPage/RoomsListPage';
+import RoomListPage from './pages/RoomListPage/RoomListPage';
 import AddGuestPage from './pages/AddGuestPage/AddGuestPage';
 import SideBar from './components/SideBar/SideBar';
 
@@ -35,7 +35,7 @@ function App() {
             </Route>
 
             <Route path="/rooms">
-              <Route index element={<RoomsListPage />} />
+              <Route index element={<RoomListPage />} />
             </Route>
           </Routes>
       </BrowserRouter> 
