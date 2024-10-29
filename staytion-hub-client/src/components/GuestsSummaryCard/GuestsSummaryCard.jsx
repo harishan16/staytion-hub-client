@@ -16,7 +16,6 @@ function GuestsSummaryCard () {
 
         try {
           const { data } = await axios.get(`${url}/api/guests`);
-          console.log(data);
           setGuestList(data);
           setIsLoading(false);
         } catch (error) {

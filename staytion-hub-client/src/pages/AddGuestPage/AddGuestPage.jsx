@@ -48,7 +48,7 @@ function AddGuestPage () {
     return (
         <Layout className={block}>
             <nav className={`${block}__navigation`}>
-                <h1 className={`${block}__title`}>Guests * Add new Guest</h1>
+                <h1 className={`${block}__title`}>Add new Guest</h1>
             </nav>
             <section className={`${block}__inputs`}>
                 <form className={`${block}__form`} onSubmit={handleSubmit}>

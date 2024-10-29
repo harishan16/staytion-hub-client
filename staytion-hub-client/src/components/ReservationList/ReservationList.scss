@@ -62,10 +62,19 @@
 
         &--room-id {
             width: 10%;
+            padding-left:2rem;
         }
 
         &--action {
             padding-left:3rem;
+        }
+
+        &--room-number {
+            padding-left: 2rem ;
+        }
+
+        &--guests-number {
+            padding-left:2rem;
         }
     }
 }

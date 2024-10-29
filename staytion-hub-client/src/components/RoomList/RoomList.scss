@@ -28,14 +28,6 @@
     &__label-item {
         width:20%;
         color:$staytion-gray;
-
-        &--guest-name {
-            width: 15%;
-        }
-
-        &--address {
-            width: 25%;
-        }
     }
 
     &__content {
@@ -60,12 +52,14 @@
     &__list-item {
         width:20%;
 
-        &--guest-name {
-            width: 15%;
+        &--room-number {
+            // width: 15%;
+            padding-left:2rem;
         }
 
-        &--address {
-            width: 25%;
+        &--capacity {
+            padding-left: 3rem;
         }
+
     }
 }

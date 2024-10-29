@@ -149,6 +149,8 @@ function AddReservationPage () {
             check_out: formatDateTime(values.check_out, '11:00')
         };
 
+        console.log(formattedValues);
+
         try {
             await axios.post(`${url}/api/reservations`, formattedValues);
             // patch call to update rooms as occupied
@@ -175,7 +177,7 @@ function AddReservationPage () {
     return (
         <Layout className={block}>
             <nav className={`${block}__navigation`}>
-                <h1 className={`${block}__title`}>Reservation * Add new Reservations</h1>
+                <h1 className={`${block}__title`}>Add new Reservations</h1>
             </nav>
             <section className={`${block}__inputs`}>
                 <form className={`${block}__form`} onSubmit={handleSubmit}>

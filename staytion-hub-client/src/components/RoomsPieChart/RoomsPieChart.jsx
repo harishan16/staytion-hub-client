@@ -13,7 +13,7 @@ const RoomsPieChart = ({roomsList}) => {
       {
         label: 'Rooms Status',
         data: [0, 0, 0, 0, 0, 0],
-        backgroundColor: ['#f4f40f', '#e6f7f7', '#4caf50', '#c8e6c9', '#2196f3', '#bbdefb'],
+        backgroundColor: ['#FF6F3C', '#e6f7f7', '#FFC93C', '#c8e6c9', '#D83A56', '#bbdefb'],
         hoverOffset: 4,
       },
     ],
@@ -57,7 +57,7 @@ const RoomsPieChart = ({roomsList}) => {
               counts.suiteOccupied,
               counts.suiteAvailable,
             ],
-            backgroundColor: ['#f4f40f', '#f8f8a4', '#f39613', '#f2cd99', '#2196f3', '#bbdefb'],
+            backgroundColor: ['#FF6F3C', '#FFD4B2', '#FFC93C', '#FFF4CC', '#D83A56', '#F9C3C8'],
             hoverOffset: 4,
           },
         ],

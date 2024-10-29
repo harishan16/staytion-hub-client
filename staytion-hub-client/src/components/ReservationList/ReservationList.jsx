@@ -35,7 +35,7 @@ function ReservationList ({data}) {
                         <li className={`${block}__label-item ${block}__label-item--guest-name`}>Guest Name</li>
                         <li className={`${block}__label-item ${block}__label-item--check-in`}>Check-in Time</li>
                         <li className={`${block}__label-item ${block}__label-item--check-out`}>Check-out Time</li>
-                        <li className={`${block}__label-item ${block}__label-item--action`}>Actions</li>
+                        {/* <li className={`${block}__label-item ${block}__label-item--action`}>Actions</li> */}
                     </ul>
                 </section>
                 <section className={`${block}__content`}>
@@ -48,9 +48,9 @@ function ReservationList ({data}) {
                                 <li className={`${block}__list-item ${block}__list-item--guest-name `}>{item.guest_name}</li>
                                 <li className={`${block}__list-item ${block}__list-item--check-in`}>{dateConversion(item.check_in)}</li>
                                 <li className={`${block}__list-item ${block}__list-item--check-out`}>{dateConversion(item.check_out)}</li>
-                                <li className={`${block}__list-item ${block}__list-item--action`}>
+                                {/* <li className={`${block}__list-item ${block}__list-item--action`}>
                                     <Button type='secondary' className={`${block}__button`}>View</Button>
-                                </li>
+                                </li> */}
                             </ul> 
                         )
                     })}
