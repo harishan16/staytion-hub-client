@@ -34,27 +34,6 @@ This application is optimized for **desktop devices** only. It may not function 
 - As a user, I want to be able to view all guests.
 - As a user, I want to be able to add new guest.
 
-### Mockups
-
-#### Reservations List
-![mockup of reservations table, listing all the reservation details](/documentation/reservations.jpg)
-
-#### Add new reservation
-![mockup of adding new reservation through a form of inputs](/documentation/add-new-reservation.jpg)
-
-#### View reservation
-![mockup of viewing a selected reservation details ](/documentation/view-reservation.jpg)
-
-#### Guests
-![mockup showing a list of all the guests](/documentation/guests.jpg)
-
-#### Rooms
-![mockup showing a list of all the rooms available](/documentation/rooms.jpg)
-
-#### Dashboard
-![mockup of dashboard containing consolidated information about bookings and revenue generated](/documentation/dashboard.jpg)
-
-
 ### Endpoints
 
 **GET /reservations**
