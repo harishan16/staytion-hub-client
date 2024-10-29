@@ -1,16 +1,13 @@
-// import Button from '../Button/Button';
 import Layout from '../Layout/Layout';
 import './RoomList.scss';
 
 function RoomList ({data}) {
-    console.log(data);
     const block = 'rooms';
 
     return (
         <Layout className={block}>
             <nav className={`${block}__navigation`}>
                 <h1 className={`${block}__title`}>Rooms</h1>
-                {/* <Button type='primary' to='/guests/add' className={`${block}__button`}>Add new Guest</Button> */}
             </nav>
             <section className={`${block}__container`}>
                 <section className={`${block}__label`}>
@@ -32,8 +29,7 @@ function RoomList ({data}) {
                             </ul> 
                         )
                     })}
-                </section>   
-                   
+                </section>            
             </section>
         </Layout>
     );

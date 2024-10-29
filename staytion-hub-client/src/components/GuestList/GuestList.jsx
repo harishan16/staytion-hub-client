@@ -3,7 +3,6 @@ import Layout from '../Layout/Layout';
 import './GuestList.scss';
 
 function GuestList ({data}) {
-    console.log(data);
     const block = 'guests';
 
     return (
@@ -33,7 +32,6 @@ function GuestList ({data}) {
                         )
                     })}
                 </section>   
-                   
             </section>
         </Layout>
     );

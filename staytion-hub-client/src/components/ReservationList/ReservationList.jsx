@@ -3,7 +3,6 @@ import Layout from '../Layout/Layout';
 import './ReservationList.scss';
 
 function ReservationList ({data}) {
-    // console.log(data);
     const block = 'reservations';
 
     function dateConversion (item) {
@@ -38,10 +37,8 @@ function ReservationList ({data}) {
                         <li className={`${block}__label-item ${block}__label-item--check-out`}>Check-out Time</li>
                         <li className={`${block}__label-item ${block}__label-item--action`}>Actions</li>
                     </ul>
-
                 </section>
                 <section className={`${block}__content`}>
-                
                     {data.map((item) => {
                         return (
                             <ul key={item.id} className={`${block}__list`}>
@@ -57,8 +54,7 @@ function ReservationList ({data}) {
                             </ul> 
                         )
                     })}
-                </section>   
-                   
+                </section>         
             </section>
         </Layout>
     );

@@ -22,7 +22,6 @@ function DashboardPage () {
 
         try {
           const { data } = await axios.get(`${url}/api/rooms`);
-          console.log(data);
           setRoomsList(data);
           setIsLoading(false);
         } catch (error) {

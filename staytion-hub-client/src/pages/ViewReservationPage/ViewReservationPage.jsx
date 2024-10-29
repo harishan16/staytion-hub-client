@@ -1,6 +1,6 @@
 function ViewReservationPage () {
     return (
-        <section>view reserv</section>
+        <section>view reservation</section>
     );
 }
 

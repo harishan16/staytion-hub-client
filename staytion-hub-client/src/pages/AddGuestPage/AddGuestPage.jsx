@@ -1,7 +1,6 @@
-import Dropdown from "../../components/Dropdown/Dropdown";
 import Layout from "../../components/Layout/Layout";
 import './AddGuestPage.scss';
-import { useCallback, useEffect, useState } from "react";
+import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from 'react-router-dom'
 import Button from "../../components/Button/Button";
@@ -21,27 +20,18 @@ function AddGuestPage () {
 
     const block = 'add-guest';
     const [values, setValues] = useState(initialValues);
-    const [guests, setGuests] = useState([]);
-    const [isError, setIsError] = useState(false);
-    const [isLoading, setIsLoading] = useState(true);
     const navigate = useNavigate();
     const url = import.meta.env.VITE_API_URL;
 
-
     const handleInputChange = (event) => {
         const { name, value } = event.target;
-        // console.log(name, value);
-
         setValues({...values, [name] : value});
     }
 
     const handleSubmit = async (event) => {
         event.preventDefault();
         let toastBox;
-        console.log(values);
 
-
-        
         try {
             await axios.post(`${url}/api/guests`, values);
             toastBox = toast.success("Guest details added!");
@@ -54,7 +44,6 @@ function AddGuestPage () {
             toast.error("Error adding guest details", { toastBox });
         }
     }
-
 
     return (
         <Layout className={block}>
@@ -71,7 +60,6 @@ function AddGuestPage () {
                             placeholder="Enter full name"
                             onChange={handleInputChange} 
                             className={`${block}__input ${block}__input--name`}
-                            // min={getTodayDate()}
                             required
                         />
                     </label>
@@ -98,7 +86,6 @@ function AddGuestPage () {
                                 value={values['contact_email']} 
                                 onChange={handleInputChange} 
                                 className={`${block}__input ${block}__input--email`}
-                                // min={getTodayDate()}
                                 required
                             />
                         </label>

@@ -1,8 +1,6 @@
 @use "../../styles/partials/global" as *;
 
 .button {
-    // width: 5rem;
-    // height: 2rem;
     padding: 0.5rem 2rem;
     cursor: pointer;
     border: none;
@@ -32,5 +30,4 @@
             text-decoration: underline;
         }
     }
-
 }

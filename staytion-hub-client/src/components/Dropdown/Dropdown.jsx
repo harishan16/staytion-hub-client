@@ -6,7 +6,6 @@ function Dropdown ({label, options, className, name, value, onChange}) {
     const [selectedOption, setSelectedOption] = useState(options[0]);
 
     const handleChange = (event) => {
-        console.log(event);
         const selectedValue = event.target.value;
         setSelectedOption(selectedValue);
         onChange(name, selectedValue);

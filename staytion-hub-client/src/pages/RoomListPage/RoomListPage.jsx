@@ -3,8 +3,6 @@ import axios from "axios";
 import { useCallback, useEffect, useState } from "react";
 
 function RoomListPage () {
-    // alert('inside');
-
         const [roomList, setRoomList] = useState([]);
         const [isError, setIsError] = useState(false);
         const [isLoading, setIsLoading] = useState(true);

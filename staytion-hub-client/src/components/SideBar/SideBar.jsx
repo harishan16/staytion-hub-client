@@ -24,7 +24,6 @@ function SideBar () {
                         </li>
                     </ul>
                 </nav>
-
             </section>
     );
 }

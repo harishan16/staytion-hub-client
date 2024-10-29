@@ -1,4 +1,3 @@
-// import Layout from "../../components/Layout/Layout";
 import GuestList from "../../components/GuestList/GuestList"
 import axios from "axios";
 import { useCallback, useEffect, useState } from "react";
