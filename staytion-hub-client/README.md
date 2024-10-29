@@ -21,7 +21,7 @@ Currently Staytion does not have a robust way to manage things to run the hotel 
 
 ### Device Compatibility
 
-- This application is optimized for **desktop devices** only. It may not function as expected on mobile or tablet devices due to layout and interaction requirements tailored to desktop resolutions.
+This application is optimized for **desktop devices** only. It may not function as expected on mobile or tablet devices due to layout and interaction requirements tailored to desktop resolutions.
 
 ### Features
 
@@ -59,7 +59,7 @@ Currently Staytion does not have a robust way to manage things to run the hotel 
 
 **GET /reservations**
 
-- get a list of reservations made
+Get a list of reservations made
 
 Response:
 ```
@@ -81,7 +81,7 @@ Response:
 
 **GET /reservations/:id**
 
-- get reservation by ID
+Get reservation by ID
 
 Response:
 ```
@@ -102,7 +102,7 @@ Response:
 
 **POST /reservation**
 
-- add new reservation details to the list of reservations
+Add new reservation details to the list of reservations
 
 Request:
 ```
@@ -134,7 +134,7 @@ Response:
 
 **GET /rooms**
 
-- get the list of rooms available
+Get the list of rooms available
 
 Response:
 ```
@@ -154,7 +154,7 @@ Response:
 
 **GET /guests**
 
-- get the list of guests
+Get the list of guests
 
 Response:
 ```
@@ -176,7 +176,7 @@ Response:
 
 **POST /guest**
 
-- add new guest details to the list of guests
+Add new guest details to the list of guests
 
 Request:
 ```
@@ -243,7 +243,7 @@ Response:
 
 ## Database Setup
 
-- To set up the database correctly, migrations and seeds must be run in the following sequence. 
+To set up the database correctly, migrations and seeds must be run in the following sequence. 
 
 ### Migrations
 
