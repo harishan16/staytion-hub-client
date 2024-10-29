@@ -249,18 +249,9 @@ function AddReservationPage () {
                         {dateError && <div className={`${block}__date-error`}>{dateError}</div>}
                         {/* <DateRangePicker onDatesChange={handleDatesChange}/> */}
                     </div>
-                    {/* <div>
-                        <input 
-                            type="file"
-                            name="proof_document"
-                            accept="image/*"
-                            onChange={handleUpload}
-                            className={`${block}__image`} 
-                        />
-                    </div> */}
                     <div className={`${block}__form-actions`}>
                         <Button type='secondary' to='/reservations' className={`${block}__button`}>Cancel</Button>
-                        <Button type='primary' to='' className={`${block}__button`}>Submit</Button>
+                        <Button type='primary' to='' className={`${block}__button`}>Add</Button>
                     </div>
                 </form>
                 <ToastContainer />
