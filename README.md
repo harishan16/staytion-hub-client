@@ -181,6 +181,27 @@ Response:
     }
 ```
 
+### Mockups
+
+#### Reservations List
+![mockup of reservations table, listing all the reservation details](/documentation/reserv.jpg)
+
+#### Add new reservation
+![mockup of adding new reservation through a form of inputs](/documentation/add-new-reserv.jpg)
+
+#### Guests
+![mockup showing a list of all the guests](/documentation/guests.jpg)
+
+#### Guests
+![mockup of adding new guests](/documentation/add-new-guests.jpg)
+
+#### Rooms
+![mockup showing a list of all the rooms available](/documentation/rooms.jpg)
+
+#### Dashboard
+![mockup of dashboard containing consolidated information about bookings and revenue generated](/documentation/dashboard.jpg)
+
+
 ## Roadmap
 
 - Create client
