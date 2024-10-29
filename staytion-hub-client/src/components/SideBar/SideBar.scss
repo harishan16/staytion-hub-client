@@ -23,6 +23,15 @@
         margin-top:2rem;
     }
 
+    &__icon {
+        // width: 1.5rem;
+        height: 2rem;
+
+        &--dashboard {
+            height:1.8rem;
+        }
+    }
+
     &__list {
         list-style-type: none;
         margin: 0;
@@ -38,10 +47,12 @@
 
     &__link {
         text-decoration: none;
-        display: block;
+        display: flex;
         color:inherit;
         padding: 1rem 2rem;
         border-radius: 0.5rem;
+        gap:1rem;
+        align-items: center;
 
         &:hover {
             color:$staytion-primary;
