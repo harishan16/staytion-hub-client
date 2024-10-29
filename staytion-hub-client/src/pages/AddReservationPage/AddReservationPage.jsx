@@ -52,7 +52,6 @@ function AddReservationPage () {
 
       // get the list of all guest names
     const getGuestNames = useCallback(async () => {
-  
         try {
           const { data } = await axios.get(`${url}/api/guests`);
           setGuestNames(data);
@@ -65,7 +64,7 @@ function AddReservationPage () {
         getGuestNames();
       }, []);
 
-//   get unique room types
+    // get unique room types
     const roomTypes = Array.from(new Set(rooms.map((room) => {return room.room_type})));
     const roomTypesArray = ['Please select', ...roomTypes];
 
@@ -81,7 +80,6 @@ function AddReservationPage () {
     const names = guestNames.map((name) => {return name.guest_name});
     const namesArray = ['Please select', ...names];
 
-    // storing all input values
     const handleSelect = (name, value) => {
         setValues({...values, [name]: value});
 
@@ -135,7 +133,6 @@ function AddReservationPage () {
         return `${date} ${time}:00`;
     };
 
-    // handling form submit
     const handleSubmit = async (event) => {
         event.preventDefault();
         let toastBox;
@@ -203,7 +200,6 @@ function AddReservationPage () {
                             
                     </div>
                     <div className={`${block}__room-info`}>
-                        {/* <p>Select Room</p> */}
                         <Dropdown 
                             label='Room type'
                             name='room_type'
@@ -223,7 +219,6 @@ function AddReservationPage () {
                         </Dropdown>   
                     </div>
                     <div className={`${block}__date-info`}>
-                        {/* <p>Check-in Date</p> */}
                         <label className={`${block}__date-label`}>Check In
                         <input 
                             type="date" 
@@ -247,7 +242,6 @@ function AddReservationPage () {
                         />
                         </label>
                         {dateError && <div className={`${block}__date-error`}>{dateError}</div>}
-                        {/* <DateRangePicker onDatesChange={handleDatesChange}/> */}
                     </div>
                     <div className={`${block}__form-actions`}>
                         <Button type='secondary' to='/reservations' className={`${block}__button`}>Cancel</Button>
@@ -258,16 +252,6 @@ function AddReservationPage () {
             </section>
         </Layout>
     );
-// )}
 }
 
 export default AddReservationPage;
-
-// {
-//     "check_in": "2404-10-24",
-//     "check_out": "2024-10-26",
-//     "guest_name": "Eva Thomas",
-//     "no_of_guests": "1",
-//     "room_number": "101",
-//     "room_type": "Deluxe Room"
-// }

@@ -9,8 +9,6 @@ import RoomListPage from './pages/RoomListPage/RoomListPage';
 import AddGuestPage from './pages/AddGuestPage/AddGuestPage';
 import SideBar from './components/SideBar/SideBar';
 
-
-
 function App() {
 
   return (

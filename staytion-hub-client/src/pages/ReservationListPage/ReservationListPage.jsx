@@ -1,7 +1,5 @@
 import axios from "axios";
-import { useCallback, useEffect, useRef, useState } from "react";
-// import { ToastContainer, toast } from "react-toastify";
-// import "react-toastify/dist/ReactToastify.css";
+import { useCallback, useEffect, useState } from "react";
 import ReservationList from '../../components/ReservationList/ReservationList'
 
 function ReservationListPage () {
@@ -18,7 +16,6 @@ function ReservationListPage () {
 
         try {
           const { data } = await axios.get(`${url}/api/reservations/`);
-          // console.log(data);
           setReservationList(data);
           setIsLoading(false);
         } catch (error) {
