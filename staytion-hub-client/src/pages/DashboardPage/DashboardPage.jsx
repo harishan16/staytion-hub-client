@@ -1,6 +1,7 @@
 import Layout from "../../components/Layout/Layout";
 import ReservationsSummaryCard from "../../components/ReservationsSummaryCard/ReservationsSummaryCard";
 import RoomsSummaryCard from "../../components/RoomsSummaryCard/RoomsSummaryCard";
+import GuestsSummaryCard from "../../components/GuestsSummaryCard/GuestsSummaryCard";
 import RoomsPieChart from "../../components/RoomsPieChart/RoomsPieChart";
 import './DashboardPage.scss';
 import axios from "axios";
@@ -43,6 +44,7 @@ function DashboardPage () {
             <section className={`${block}__summary`}>
                 <ReservationsSummaryCard />
                 <RoomsSummaryCard roomsList={roomsList} />
+                <GuestsSummaryCard />
             </section>
             <section className={`${block}__chart`}>
               <RoomsPieChart roomsList={roomsList} />
