@@ -1,0 +1,80 @@
+@use "../../styles/partials/global" as *;
+
+.reservations {
+    &__navigation {
+        padding:2rem 2rem 0 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__container {
+        padding: 1rem 2rem 2rem 2rem;
+    }
+
+    &__label-list {
+        list-style-type: none;
+        display: flex;
+        text-transform: uppercase;
+        font-size: 14px;
+        flex-direction: row;
+        gap:1rem;
+        margin:0;
+        padding: 2rem 0;
+        justify-content: space-between;
+        border-bottom:1px solid $staytion-light-gray;
+    }
+
+    &__label-item {
+        width:15%;
+        color:$staytion-gray;
+
+        &--room-id {
+            width: 10%;
+        }
+
+        &--action {
+            padding-left:3rem;
+        }
+    }
+
+    &__content {
+        overflow-y: auto;
+        width: 100%;
+        height: 70vh;
+    }
+
+    &__list {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        gap:1rem;
+        margin:0;
+        padding: 2rem 0;
+        justify-content: space-between;
+        &:not(:last-of-type) {
+            border-bottom:1px solid $staytion-light-gray;
+        }
+    }
+
+    &__list-item {
+        width:15%;
+
+        &--room-id {
+            width: 10%;
+            padding-left:2rem;
+        }
+
+        &--action {
+            padding-left:3rem;
+        }
+
+        &--room-number {
+            padding-left: 2rem ;
+        }
+
+        &--guests-number {
+            padding-left:2rem;
+        }
+    }
+}

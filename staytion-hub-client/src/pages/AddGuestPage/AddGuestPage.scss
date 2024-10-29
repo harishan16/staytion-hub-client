@@ -1,0 +1,63 @@
+@use "../../styles/partials/global" as *;
+
+.add-guest {
+
+    &__navigation {
+        padding:2rem;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        padding: 0 2rem;
+        gap:3rem;
+        width: 60%;
+    }
+
+    &__label-name{
+        width:100%;
+    }
+
+    &__row {
+        display: flex;
+        gap:3rem;
+    }
+
+    &__label-number{
+        flex:1;
+    }
+
+    &__label-email {
+        flex:1;
+    }
+
+    &__label-address {
+        width:100%;
+    }
+
+    &__label-city {
+        flex:1;
+    }
+
+    &__label-country {
+        flex:1;
+    }
+
+    &__input {
+        width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 0.5rem;
+    }
+
+    &__form-actions {
+        display: flex;
+        gap:2rem;
+    }
+
+    &__button {
+        width:20%;
+        text-align: center;
+    }
+
+}

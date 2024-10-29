@@ -1,8 +1,9 @@
+import './ReservationsSummaryCard.scss';
 import axios from "axios";
 import { useCallback, useEffect, useState } from "react";
-import ReservationList from '../../components/ReservationList/ReservationList'
+import Card from '../Card/Card';
 
-function ReservationListPage () {
+function ReservationsSummaryCard () {
 
     const [reservationList, setReservationList] = useState([]);
     const [isError, setIsError] = useState(false);
@@ -15,7 +16,7 @@ function ReservationListPage () {
         setIsError(false);
 
         try {
-          const { data } = await axios.get(`${url}/api/reservations/`);
+          const { data } = await axios.get(`${url}/api/reservations`);
           setReservationList(data);
           setIsLoading(false);
         } catch (error) {
@@ -28,6 +29,7 @@ function ReservationListPage () {
         getList();
       }, [getList]);
 
+    
     if(isError) {
         return <h1>Sorry, there was some error in fetching the data</h1>
     }
@@ -37,8 +39,8 @@ function ReservationListPage () {
     }
 
     return (
-        <ReservationList data={reservationList}></ReservationList>
+        <Card title="Total Reservations" value={reservationList? reservationList.length : ''}/>
     );
 }
 
-export default ReservationListPage;
+export default ReservationsSummaryCard;

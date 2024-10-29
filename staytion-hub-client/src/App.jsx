@@ -1,23 +1,20 @@
-import './App.css'
+import './App.scss'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import DashboardPage from './pages/DashboardPage/DashboardPage'
 import ReservationListPage from './pages/ReservationListPage/ReservationListPage';
 import AddReservationPage from './pages/AddReservationPage/AddReservationPage';
 import ViewReservationPage from './pages/ViewReservationPage/ViewReservationPage';
 import GuestListPage from './pages/GuestListPage/GuestListPage';
-import RoomsListPage from './pages/RoomsListPage/RoomsListPage';
+import RoomListPage from './pages/RoomListPage/RoomListPage';
 import AddGuestPage from './pages/AddGuestPage/AddGuestPage';
 import SideBar from './components/SideBar/SideBar';
-
-
 
 function App() {
 
   return (
     <>
-      {/* <h1>Welcome to Staytion Hub</h1> */}
-      <SideBar></SideBar>
       <BrowserRouter>
+      <SideBar />
       <Routes>
             <Route path="/" element={<DashboardPage />} />
 
@@ -36,7 +33,7 @@ function App() {
             </Route>
 
             <Route path="/rooms">
-              <Route index element={<RoomsListPage />} />
+              <Route index element={<RoomListPage />} />
             </Route>
           </Routes>
       </BrowserRouter> 

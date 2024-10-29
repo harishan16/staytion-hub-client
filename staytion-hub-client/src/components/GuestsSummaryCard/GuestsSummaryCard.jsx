@@ -1,25 +1,25 @@
+import './GuestsSummaryCard.scss';
 import axios from "axios";
 import { useCallback, useEffect, useState } from "react";
-import ReservationList from '../../components/ReservationList/ReservationList'
+import Card from '../Card/Card';
 
-function ReservationListPage () {
-
-    const [reservationList, setReservationList] = useState([]);
+function GuestsSummaryCard () {
+    const [guestList, setGuestList] = useState([]);
     const [isError, setIsError] = useState(false);
     const [isLoading, setIsLoading] = useState(true);
     const url = import.meta.env.VITE_API_URL;
 
-// get the list of all reservations to display list
+// get the list of all guests
     const getList = useCallback(async () => {
         setIsLoading(true);
         setIsError(false);
 
         try {
-          const { data } = await axios.get(`${url}/api/reservations/`);
-          setReservationList(data);
+          const { data } = await axios.get(`${url}/api/guests`);
+          setGuestList(data);
           setIsLoading(false);
         } catch (error) {
-          console.error(`Could not fetch reservations list ${error}`);
+          console.error(`Could not fetch guest list ${error}`);
           setIsError(true);
         }
       }, []);
@@ -28,6 +28,7 @@ function ReservationListPage () {
         getList();
       }, [getList]);
 
+    
     if(isError) {
         return <h1>Sorry, there was some error in fetching the data</h1>
     }
@@ -37,8 +38,8 @@ function ReservationListPage () {
     }
 
     return (
-        <ReservationList data={reservationList}></ReservationList>
+        <Card title="Total Guests" value={guestList? guestList.length : ''}/>
     );
 }
 
-export default ReservationListPage;
+export default GuestsSummaryCard;

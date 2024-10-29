@@ -1,4 +1,5 @@
 # Project Title
+
 Staytion Hub
 
 ## Overview
@@ -11,25 +12,27 @@ Staytion is a newly established hotel which provides world class experience for 
 
 ### Problem Statement
 
- Currently Staytion does not have a robust way to manage things to run the hotel bookings. It also has future plans to expand it's business in multiple locations, therefore it needs a strongly built software application to work efficiently. An application that can handle booking details for customers and organize hotel management details, so that it is easy to analyze and manipulate data by hotel owners/managers.  
-
+Currently Staytion does not have a robust way to manage things to run the hotel bookings. It also has future plans to expand it's business in multiple locations, therefore it needs a strongly built software application to work efficiently. An application that can handle booking details for customers and organize hotel management details, so that it is easy to analyze and manipulate data by hotel owners/managers.  
 
 ### User Profile
 
 - Hotel Owner
 - Admins/manager
 
+### Device Compatibility
+
+- This application is optimized for **desktop devices** only. It may not function as expected on mobile or tablet devices due to layout and interaction requirements tailored to desktop resolutions.
+
 ### Features
 
+- As a user, I want to be able to see highlights in a dashboard view.
+
 - As a user, I want to be able to view the list of reservations made.
-- As a user, I want to be able to view individual reservation details. 
 - As a user, I want to be able to make a new reservation for a customer. 
-- As a user, I want to be able to edit reservation details.
-- As a user, I want to be able to cancel a reservation.
 
 - As a user, I want to be able to view all rooms available.
 - As a user, I want to be able to view all guests.
-- As a user, I want to be able to view the reservation details made by a particular guest.
+- As a user, I want to be able to add new guest.
 
 ### Mockups
 
@@ -63,13 +66,14 @@ Response:
 [
     {
         "id": 1,
-        "guest_name": "Sam Anderson",
-        "room_type": "Deluxe",
+        "guest_id": 1,
+        "room_id": 1,
+        "room_type": "Family Room",
+        "room_number": 202,
+        "guest_name": "Eva Thomas",
         "no_of_guests": 4,
-        "check_in": date of check in,
-        "check_out": date of check out,
-        "status": "booked",
-        "proof_document": "driver's_licence.png",
+        "check_in": "2024-10-23T19:00:00.000Z",
+        "check_out": "2024-10-28T15:00:00.000Z",
     },
     ...
 ]
@@ -82,14 +86,17 @@ Response:
 Response:
 ```
     {
-        "id": 1,
-        "guest_name": "Sam Anderson",
-        "room_type": "Deluxe",
+       "id": 1,
+        "guest_id": 1,
+        "room_id": 1,
+        "room_type": "Family Room",
+        "room_number": 202,
+        "guest_name": "Eva Thomas",
         "no_of_guests": 4,
-        "check_in": date of check in,
-        "check_out": date of check out,
-        "status": "booked",
-        "proof_document": "driver's_licence.png",
+        "check_in": "2024-10-23T19:00:00.000Z",
+        "check_out": "2024-10-28T15:00:00.000Z",
+        "created_at": "2024-10-25T16:19:54.000Z",
+        "updated_at": "2024-10-25T16:19:54.000Z"
     }
 ```
 
@@ -100,26 +107,28 @@ Response:
 Request:
 ```
     {
-        "guest_name": "Sam Anderson",
-        "room_type": "Deluxe",
-        "no_of_guests": 4,
-        "check_in": date of check in,
-        "check_out": date of check out,
-        "status": "booked",
-        "proof_document": "driver's_licence.png",
+        "check_in":"2024-10-31 15:00:00",
+        "check_out":"2024-11-01 11:00:00",
+        "guest_id": 1,
+        "guest_name": "Eva Thomas",
+        "no_of_guests": "3",
+        "room_id": 7,
+        "room_number": "103",
+        "room_type" : "Deluxe Room"
     }
 ```
 Response:
 ```
     {
         "id": 1,
-        "guest_name": "Sam Anderson",
-        "room_type": "Deluxe",
-        "no_of_guests": 4,
-        "check_in": date of check in,
-        "check_out": date of check out,
-        "status": "booked",
-        "proof_document": "driver's_licence.png",
+        "check_in":"2024-10-31 15:00:00",
+        "check_out":"2024-11-01 11:00:00",
+        "guest_id": 1,
+        "guest_name": "Eva Thomas",
+        "no_of_guests": "3",
+        "room_id": 7,
+        "room_number": "103",
+        "room_type" : "Deluxe Room"
     }
 ```
 
@@ -132,11 +141,12 @@ Response:
 [
     {
         "id": 1,
-        "room_number": 302,
-        "room_type": "Deluxe",
+        "room_number": 101,
+        "room_type": "Deluxe Room",
         "capacity": 2,
-        "status": "occupied",
-        "housekeeping_status" : "clean", 
+        "status": "Occupied",
+        "created_at": "2024-10-25T16:14:49.000Z",
+        "updated_at": "2024-10-25T16:14:49.000Z"
     },
     ...
 ]
@@ -150,13 +160,15 @@ Response:
 ```
 [
     {
-        "id": 1,
-        "name": 302,
-        "contact_number": "+1 647-872-9023",
-        "contact_email": "sam@gmail.com",
-        "address": "34, Erskine Street",
-        "city":"Toronto"
-        "proof_document" : "driver's_licence.png", 
+        "id": 2,
+        "guest_name": "Sofia Jane",
+        "contact_number": "+1(647)-845-8531",
+        "contact_email": "sofia@yahoo.com",
+        "address": "4, Dufferin Ave",
+        "city": "Toronto",
+        "country": "Canada",
+        "created_at": "2024-10-25T16:19:36.000Z",
+        "updated_at": "2024-10-25T16:19:36.000Z" 
     },
     ...
 ]
@@ -169,24 +181,24 @@ Response:
 Request:
 ```
     {
-        "name": Sam Anderson,
-        "contact_number": "+1 647-872-9023",
-        "contact_email": "sam@gmail.com",
-        "address": "34, Erskine Street",
-        "city":"Toronto"
-        "proof_document" : "driver's_licence.png", 
+        "guest_name":"eva",
+        "contact_number":"6456783567",
+        "contact_email":"vu@gmail.com",
+        "address":"23, eve",
+        "city":"Toronto",
+        "country":"canada"
     }
 ```
 Response:
 ```
     {
         "id": 1,
-        "name": "Sam Anderson",
-        "contact_number": "+1 647-872-9023",
-        "contact_email": "sam@gmail.com",
-        "address": "34, Erskine Street",
-        "city":"Toronto"
-        "proof_document" : "driver's_licence.png", 
+        "guest_name":"eva",
+        "contact_number":"6456783567",
+        "contact_email":"vu@gmail.com",
+        "address":"23, eve",
+        "city":"Toronto",
+        "country":"canada" 
     }
 ```
 
@@ -206,25 +218,41 @@ Response:
 - Deploy client and server to GitHub and make an initial commit
 
 - Features
-
+- Dashboard:
+    - View gist of number of reservations, guests, rooms and occupancy rate
+    - View room occupancy state in a chart 
 - Reservations:
     - Read - display list of reservations
-    - Read - display individual reservation details based on reservation ID
-    - Create - add new reservation via form
-    - Update - edit reservations details and update display list
-    - Delete - cancel reservation
-
+    - Create - add new reservation via add form
 - Rooms:
     - Read - display available rooms
 - Guests:
     - Read - display all guest who signed up
-    - Read - view contact & booking details based on Guest ID
-
+    - Create - add new guests via add form
 
 ## Nice-to-haves
 
-- Filter, Search & Sorting 
+- view/edit reservations, guests
+- cancel reservation, remove guest
 - Dates implementation calendar
-- Dashboard
+- Filter, Search & Sorting 
 - SignIn/SignUp
-- Customer website
+- ID proof validation
+- add more rooms to one reservation
+- track payments
+
+## Database Setup
+
+- To set up the database correctly, migrations and seeds must be run in the following sequence. 
+
+### Migrations
+
+-  npx knex migrate:up 20241016212741_create_guests_table.js
+-  npx knex migrate:up 20241016212756_create_rooms_table.js
+-  npx knex migrate:up 20241016212536_create_reservations_table.js
+
+### Seeds
+
+-  npx knex seed:run --specific=01_guests.js
+-  npx knex seed:run --specific=02_rooms.js
+-  npx knex seed:run --specific=03_reservations.js
